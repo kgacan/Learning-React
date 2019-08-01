@@ -16,9 +16,10 @@ class User extends Component {
                     placeholder:'Enter your name'
                 },
                 validation:{
-                    required:true
+                    required:true,
+                    minLen:5
                 },
-                valid:true,
+                valid:false,
                 touched:false,
                 validationMessage:''
             },
@@ -34,7 +35,7 @@ class User extends Component {
                 },
                 validation:{
                     required:false,
-                    minLen:5
+                    
                 },
                 valid:true,
                 touched:false,

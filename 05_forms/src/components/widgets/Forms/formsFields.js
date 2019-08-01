@@ -33,7 +33,7 @@ const FormFields = (props) => {
         newState[id].value = event.target.value;
         
         if(blur){
-            let validData=validate(newState[id]);
+            let validData = validate(newState[id]);
             newState[id].valid=validData[0];
             newState[id].validationMessage=validData[1];
         }
@@ -47,8 +47,8 @@ const FormFields = (props) => {
 
         if(element.validation.minLen){
             const valid = element.value.length >= element.validation.minLen;
-            const message = `${!valid ? 'Must be greater than'+element.validation.minLen:''}`;
-            error= !valid?[valid,message]:error;
+            const message = `${!valid ? 'Must be greater than' + element.validation.minLen:''}`;
+            error = !valid ? [valid,message] : error;
         }
 
         if(element.validation.required){
@@ -88,6 +88,9 @@ const FormFields = (props) => {
                         <input
                             {...values.config}
                             value={values.value}
+                            onBlur={
+                                (event) => changeHendler(event, data.id, true)
+                            }
                             onChange={
                                 (event) => changeHendler(event, data.id)
                             }
@@ -103,9 +106,7 @@ const FormFields = (props) => {
                         <textarea
                             {...values.config}
                             value={values.value}
-                            onBlur={
-                                (event) => changeHendler(event, data.id, true)
-                            }
+
                             onChange={
                                 (event) => changeHendler(event, data.id, false)
                             }
