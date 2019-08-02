@@ -4,13 +4,15 @@ import * as firebase from 'firebase';
 
   // Your web app's Firebase configuration
   const config = {
-    apiKey: "AIzaSyAOVifeU_W-isSoizURZnBEsPU4LBI60uI",
-    authDomain: "forms-test-2910f.firebaseapp.com",
-    databaseURL: "https://forms-test-2910f.firebaseio.com",
-    projectId: "forms-test-2910f",
-    storageBucket: "forms-test-2910f.appspot.com",
-    messagingSenderId: "823168198614",
-    appId: "1:823168198614:web:26de0124ec9c1ba5"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+
+    //This should be populated with firebase database info
   };
 
   firebase.initializeApp(config);
