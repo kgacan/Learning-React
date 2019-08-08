@@ -1,0 +1,59 @@
+
+
+const cars = [
+    {brand:"Ford",price:500,available:2,type:"Sport car"},
+    {brand:"Nissan",price:200,available:5,type:"Wagon"},
+    {brand:"Chevy",price:300,available:4,type:"Sport car"},
+    {brand:"Porsche",price:100,available:0,type:"Urban"}
+]
+
+
+const brands = cars.reduce(function(start, car){
+    start.push(car.brand)
+
+    return start
+},[])
+
+
+console.log(brands);
+
+
+
+--------------------------------------
+
+
+const computers = [
+    {type:'Laptop',price:124, os:'Windows'},
+    {type:'Desk',price:124, os:'Mac'},
+    {type:'Desk',price:124, os:'Windows'},
+    {type:'Laptop',price:124, os:'Mac'},
+    {type:'Laptop',price:124, os:'Windows'},
+ ];
+
+ let osTypes = computers.reduce(function(start, item){
+
+    return item.os === 'Mac'?{mac:start.mac+1, windows:start.windows}:
+    {mac:start.mac, windows:start.windows+1}
+
+ }, {mac:0,windows:0})
+
+ console.log(osTypes);
+
+----------------------------------------
+
+const value = (name, age)=>{
+    return `I am ${name} and i have ${age}`
+}
+
+console.log(value("James",45))
+
+
+----------------------------------------------------------
+
+
+const value = (x,y)=> x+y;
+
+console.log(value("James",45))
+
+----------------------------------------------------
+
